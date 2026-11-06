@@ -5,7 +5,7 @@ suffixFunction = function() {
 	var newCurrentPixels = currentPixels;
 	var pixelsFirst = [];
 	var pixelsLast = [];
-	var canvas = document.getElementById("game");
+	var canvas = document.getElementById("screen");
 	var ctx = canvas.getContext("2d");
 
 	for (var i = 0; i < newCurrentPixels.length; i++) {

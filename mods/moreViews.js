@@ -211,7 +211,7 @@ runAfterLoadList.push(() => drawPixels = (function() {
         if (view >= 4) {
             if (maxDistance == -1) maxDistance = Math.sqrt((width / 2) ** 2 + (height / 2) ** 2) * 2;
             
-            const canvas = document.getElementById("game");
+            const canvas = document.getElementById("screen");
             const ctx = canvas.getContext("2d");
             var newCurrentPixels = currentPixels.slice();
             var pixelsFirst = [];

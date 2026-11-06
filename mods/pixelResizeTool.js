@@ -1,7 +1,7 @@
 pixelResizeButton = document.createElement("button");
 pixelResizeButton.onclick = function(pixel) {
-    let canvas_width = document.getElementById("game").width;
-    let canvas_height = document.getElementById("game").height;
+    let canvas_width = document.getElementById("screen").width;
+    let canvas_height = document.getElementById("screen").height;
     promptInput("How big should pixels be?", (pixelSizeNeeded) => {
         // let pixelSizeNeeded = prompt("How big should pixels be?");
         if (!pixelSizeNeeded || isNaN(pixelSizeNeeded)) {

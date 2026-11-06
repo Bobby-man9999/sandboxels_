@@ -372,7 +372,7 @@ runAfterLoad(function(){
         else if (currentElement === "pick") { mouseMiddleAction(e,mouseX,mouseY); return; }
         // If x and y are undefined, get the mouse position
         if (mouseX == undefined && mouseY == undefined) {
-            // var canvas = document.getElementById("game");
+            // var canvas = document.getElementById("screen");
             // var ctx = canvas.getContext("2d");
             lastPos = mousePos;
             mousePos = getMousePos(canvas, e);
@@ -449,7 +449,7 @@ runAfterLoad(function(){
     mouse2Action = function(e,mouseX=undefined,mouseY=undefined,startPos) {
         // Erase pixel at mouse position
         if (mouseX == undefined && mouseY == undefined) {
-            // var canvas = document.getElementById("game");
+            // var canvas = document.getElementById("screen");
             // var ctx = canvas.getContext("2d");
             lastPos = mousePos;
             mousePos = getMousePos(canvas, e);

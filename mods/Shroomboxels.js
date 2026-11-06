@@ -24,7 +24,7 @@ function drawPixels(forceTick=false) {
 		};
 	}
 	// Draw the current pixels
-		var canvas = document.getElementById("game");
+		var canvas = document.getElementById("screen");
 		var ctx = canvas.getContext("2d");
 		for (var i = 0; i < newCurrentPixels.length; i++) {
 			pixel = newCurrentPixels[i];

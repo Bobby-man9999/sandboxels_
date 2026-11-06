@@ -42,7 +42,7 @@ if(enabledMods.includes(libraryMod) && enabledMods.includes(libHookTickMod)) {
 			}
 		}
 		// Draw the current pixels
-		var canvas = document.getElementById("game");
+		var canvas = document.getElementById("screen");
 		var ctx = canvas.getContext("2d");
 		var pixelDrawList = pixelsFirst.concat(pixelsLast);
 		for (var i = 0; i < pixelDrawList.length; i++) {

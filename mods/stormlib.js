@@ -80,7 +80,7 @@ class stormlibColor {
 
 class stormlibPixels {
 	create(x, y, color) {
-		let canvas = document.getElementById('game')
+		let canvas = document.getElementById('screen')
 		if (x < canvas.width && y < canvas.height) {
 			let old = ctx.fillStyle
 			ctx.fillStyle = color

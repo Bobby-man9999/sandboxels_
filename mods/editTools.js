@@ -114,7 +114,7 @@ elements.select = {
         if (holding) {
             selection_.end = mousePos;
         }
-        const canvas = document.getElementById("game");
+        const canvas = document.getElementById("screen");
         const ctx = canvas.getContext("2d");
         const start = {
             x: Math.round(selection_.start.x * pixelSize),
@@ -179,7 +179,7 @@ elements.box = {
             } else {
                 box.end = mousePos;
             }
-            const canvas = document.getElementById("game");
+            const canvas = document.getElementById("screen");
             const ctx = canvas.getContext("2d");
             const start = {
                 x: Math.round(box.start.x * pixelSize),
@@ -277,7 +277,7 @@ elements.selectionMove = {
         selectionMoved = selected;
     },
     perTick: () => {
-        const canvas = document.getElementById("game");
+        const canvas = document.getElementById("screen");
         const ctx = canvas.getContext("2d");
         ctx.globalAlpha = 1;
         const start = {
@@ -398,7 +398,7 @@ elements.rectangle = {
             } else {
                 box.end = mousePos;
             }
-            const canvas = document.getElementById("game");
+            const canvas = document.getElementById("screen");
             const ctx = canvas.getContext("2d");
             const start = {
                 x: Math.round(box.start.x * pixelSize),
@@ -507,7 +507,7 @@ elements.ellipse = {
             } else {
                 box.end = mousePos;
             }
-            const canvas = document.getElementById("game");
+            const canvas = document.getElementById("screen");
             const ctx = canvas.getContext("2d");
             const start = {
                 x: Math.round(box.start.x * pixelSize),
@@ -541,7 +541,7 @@ document.addEventListener("mousedown", (ev) => {
 mouse2Action = (e,mouseX=undefined,mouseY=undefined,startPos) => {
     // Erase pixel at mouse position
     if (mouseX == undefined && mouseY == undefined) {
-        var canvas = document.getElementById("game");
+        var canvas = document.getElementById("screen");
         var ctx = canvas.getContext("2d");
         lastPos = mousePos;
         mousePos = getMousePos(canvas, e);

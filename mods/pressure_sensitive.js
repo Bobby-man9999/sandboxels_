@@ -1,6 +1,6 @@
 runAfterLoad(() => {
     let oldMouseSize;
-    let canvas = document.getElementById("game");
+    let canvas = document.getElementById("screen");
     canvas.addEventListener("pointerdown", (event) => {
         oldMouseSize = mouseSize;
         mouseSize = oldMouseSize * ((event.pressure || 0.5) / 0.5);

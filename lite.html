@@ -1093,7 +1093,7 @@
 
         function drawPixels(forceTick = false) {
             if (!hiding) {
-                var canvas = document.getElementById("game");
+                var canvas = document.getElementById("screen");
                 var ctx = canvas.getContext("2d");
             }
             // Draw the current pixels
@@ -1132,7 +1132,7 @@
                 mouseAction(null, mousePos.x, mousePos.y);
             }
             // Get the canvas
-            var canvas = document.getElementById("game");
+            var canvas = document.getElementById("screen");
             var ctx = canvas.getContext("2d");
             // Clear the canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1193,7 +1193,7 @@
             if (mouseIsDown) {
                 mouseAction(e);
             } else {
-                var canvas = document.getElementById("game");
+                var canvas = document.getElementById("screen");
                 mousePos = getMousePos(canvas, e);
             }
         }
@@ -1238,7 +1238,7 @@
             }
             // If x and y are undefined, get the mouse position
             if (mouseX == undefined && mouseY == undefined) {
-                var canvas = document.getElementById("game");
+                var canvas = document.getElementById("screen");
                 var ctx = canvas.getContext("2d");
                 mousePos = getMousePos(canvas, e);
                 var mouseX = mousePos.x;
@@ -1284,7 +1284,7 @@
         function mouse2Action(e, mouseX = undefined, mouseY = undefined) {
             // Erase pixel at mouse position
             if (mouseX == undefined && mouseY == undefined) {
-                var canvas = document.getElementById("game");
+                var canvas = document.getElementById("screen");
                 var ctx = canvas.getContext("2d");
                 mousePos = getMousePos(canvas, e);
                 var mouseX = mousePos.x;
@@ -1316,7 +1316,7 @@
         function mouseMiddleAction(e, mouseX = undefined, mouseY = undefined) {
             // Erase pixel at mouse position
             if (mouseX == undefined && mouseY == undefined) {
-                var canvas = document.getElementById("game");
+                var canvas = document.getElementById("screen");
                 var ctx = canvas.getContext("2d");
                 mousePos = getMousePos(canvas, e);
                 var mouseX = mousePos.x;
@@ -1398,12 +1398,12 @@
         paused = false;
 
         function focusGame() {
-            document.getElementById("game").focus();
+            document.getElementById("screen").focus();
         }
         //on window load
         window.onload = function () {
             // While the mouse is down, run mouseDown()
-            var gameCanvas = document.getElementById("game");
+            var gameCanvas = document.getElementById("screen");
             // Get context
             var ctx = gameCanvas.getContext("2d");
             var newWidth = Math.ceil(window.innerWidth * 0.9 / pixelSize) * pixelSize;
@@ -1558,7 +1558,7 @@
         <a href="https://sandboxels.R74n.com" class="backbutton">&lt;</a>
         Sandboxels Lite (by <a href="http://markverb1.xyz">markverb1</a>)</h1><br>
     <div id="gameDiv">
-            <canvas id="game" width="800" height="600" oncontextmenu="return false;">
+            <canvas id="screen" width="800" height="600" oncontextmenu="return false;">
                 Your browser does not support the HTML5 canvas tag.
             </canvas>
             <div id="underDiv">

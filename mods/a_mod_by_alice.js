@@ -2704,7 +2704,7 @@ color1 and color2 spread through striped paint like dye does with itself. <u>col
 	//FORCE DATA FOOTER TO 2 LINES SO IT NEVER HIDES INFO
 	//ENABLE RUNNING CODE AFTER STATE ELEMENT AUTOGENERATION (runAfterAutogen) ##
 		resizeCanvas = function(newHeight,newWidth,newPixelSize,clear) {
-			var gameCanvas = document.getElementById("game");
+			var gameCanvas = document.getElementById("screen");
 			var ctx = gameCanvas.getContext("2d");
 			ctx.canvas.width = newWidth;
 			ctx.canvas.height = newHeight;
@@ -3293,8 +3293,8 @@ color1 and color2 spread through striped paint like dye does with itself. <u>col
 			}
 		};
 
-		gameCanvas = document.getElementById("game");
-		canvas = document.getElementById("game");
+		gameCanvas = document.getElementById("screen");
+		canvas = document.getElementById("screen");
 		ctx = gameCanvas?.getContext?.("2d");
 		if(!ctx) { window.addEventListener("load",function() {
 			ctx = gameCanvas.getContext("2d")
@@ -3436,7 +3436,7 @@ color1 and color2 spread through striped paint like dye does with itself. <u>col
 					return 'Are you sure you want to leave?';
 				}
 			};
-			document.getElementById("game").oncontextmenu = function(e) { e.preventDefault(); return false; }
+			document.getElementById("screen").oncontextmenu = function(e) { e.preventDefault(); return false; }
 			document.addEventListener("keydown", function(e) {
 				var keyName = e.code;
 				if(document.activeElement?.tagName == "INPUT") {
@@ -3954,8 +3954,8 @@ color1 and color2 spread through striped paint like dye does with itself. <u>col
 			loadSettingsIntoHTML()
 
 
-			gameCanvas = document.getElementById("game");
-			canvas = document.getElementById("game");
+			gameCanvas = document.getElementById("screen");
+			canvas = document.getElementById("screen");
 			// Get context
 			ctx = gameCanvas.getContext("2d");
 			if (window.innerWidth < 700) {

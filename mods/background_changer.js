@@ -5,7 +5,7 @@
 function setCanvasBG(url, color) {
     delete settings.bg;
 
-    let canvas = document.getElementById("game");
+    let canvas = document.getElementById("screen");
     canvas.style.backgroundColor = "";
     canvas.style.backgroundImage = `url(${url})`;
     canvas.style.backgroundRepeat = "no-repeat";
@@ -23,7 +23,7 @@ function setCanvasBG(url, color) {
 }
 function clearCanvasBG() {
     delete settings.bgimg;
-    let canvas = document.getElementById("game");
+    let canvas = document.getElementById("screen");
     canvas.style.backgroundImage = "";
     canvas.style.backgroundRepeat = "";
     canvas.style.backgroundSize = "";
